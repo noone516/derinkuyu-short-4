@@ -1,0 +1,60 @@
+name: Render Derinkuyu Short (Video Only)
+on:
+  workflow_dispatch:
+    inputs:
+      frames:
+        description: 'Frame range (e.g., 0-1859 or 0-100 for test)'
+        required: true
+        default: '0-1859'
+      quality:
+        description: 'CRF quality (16-23, lower=better)'
+        required: true
+        default: '16'
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    name: Render ${{ github.event.inputs.frames }} @ CRF${{ github.event.inputs.quality }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Remotion bundle
+        run: npm run build
+
+      - name: Render video
+        run: |
+          npx remotion render src/index.tsx DerinkuyuShort out/final.mp4 \
+            --codec h264 \
+            --crf ${{ github.event.inputs.quality }} \
+            --gl=angle \
+            --frames=${{ github.event.inputs.frames }} \
+--concurrency 2
+
+      - name: Verify output
+        run: |
+          echo "=== Video Info ==="
+          ffprobe -v error -select_streams v:0 -show_entries stream=width,height,r_frame_rate,duration,bit_rate -of csv=p=0 out/final.mp4
+          echo "=== File Size ==="
+          ls -lh out/final.mp4
+
+      - name: Upload video artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: derinkuyu-video-${{ github.event.inputs.frames }}-crf${{ github.event.inputs.quality }}
+          path: out/final.mp4
+          retention-days: 14
+          compression-level: 0

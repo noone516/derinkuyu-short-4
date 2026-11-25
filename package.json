@@ -1,0 +1,31 @@
+{
+  "name": "derinkuyu-short",
+  "version": "1.0.0",
+  "description": "Derinkuyu underground city cartoon 3D short",
+  "scripts": {
+    "start": "remotion studio",
+    "build": "remotion bundle",
+    "render": "remotion render"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.90.0",
+    "@react-three/fiber": "^8.18.0",
+    "@react-three/postprocessing": "^2.19.1",
+    "canvas": "^3.2.3",
+    "postprocessing": "^6.39.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.0",
+"three": "^0.176.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@remotion/bundler": "^4.0.0",
+    "@remotion/cli": "^4.0.0",
+    "@remotion/tailwind": "^4.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+"@types/three": "^0.176.0",
+    "typescript": "^5.3.0"
+  }
+}

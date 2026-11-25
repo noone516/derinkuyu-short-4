@@ -1,0 +1,325 @@
+[
+  {
+    "time": 0,
+    "type": "sfx",
+    "name": "flash",
+    "params": {
+      "gain": 0.3
+    }
+  },
+  {
+    "time": 0,
+    "type": "sfx",
+    "name": "wind",
+    "params": {
+      "gain": 0.4,
+      "fadeIn": 1
+    }
+  },
+  {
+    "time": 0,
+    "type": "music",
+    "name": "drone_low",
+    "params": {
+      "gain": 0.2,
+      "fadeIn": 2
+    }
+  },
+  {
+    "time": 11.861,
+    "type": "sfx",
+    "name": "horn",
+    "params": {
+      "pitch": 0.8,
+      "gain": 0.6
+    }
+  },
+  {
+    "time": 12.361,
+    "type": "sfx",
+    "name": "horn_echo",
+    "params": {
+      "pitch": 0.6,
+      "gain": 0.3
+    }
+  },
+  {
+    "time": 14.604,
+    "type": "sfx",
+    "name": "stone_grind",
+    "params": {
+      "gain": 0.8,
+      "duration": 2
+    }
+  },
+  {
+    "time": 14.604,
+    "type": "sfx",
+    "name": "thud_heavy",
+    "params": {
+      "gain": 0.7
+    }
+  },
+  {
+    "time": 14.604,
+    "type": "sfx",
+    "name": "dust_puff",
+    "params": {
+      "gain": 0.3
+    }
+  },
+  {
+    "time": 17.801,
+    "type": "sfx",
+    "name": "footsteps_gravel",
+    "params": {
+      "gain": 0.4,
+      "rate": 2
+    }
+  },
+  {
+    "time": 18.801,
+    "type": "sfx",
+    "name": "footsteps_gravel",
+    "params": {
+      "gain": 0.4,
+      "rate": 2
+    }
+  },
+  {
+    "time": 18.763,
+    "type": "sfx",
+    "name": "goat_bleat",
+    "params": {
+      "pitch": 1.0,
+      "gain": 0.5
+    }
+  },
+  {
+    "time": 19.363000000000003,
+    "type": "sfx",
+    "name": "goat_bleat",
+    "params": {
+      "pitch": 1.2,
+      "gain": 0.4
+    }
+  },
+  {
+    "time": 19.998,
+    "type": "sfx",
+    "name": "chicken_cluck",
+    "params": {
+      "gain": 0.3
+    }
+  },
+  {
+    "time": 20.398,
+    "type": "sfx",
+    "name": "chicken_cluck",
+    "params": {
+      "gain": 0.3
+    }
+  },
+  {
+    "time": 21.201,
+    "type": "sfx",
+    "name": "wood_creak",
+    "params": {
+      "gain": 0.4
+    }
+  },
+  {
+    "time": 21.701,
+    "type": "sfx",
+    "name": "liquid_squish",
+    "params": {
+      "gain": 0.3
+    }
+  },
+  {
+    "time": 25.025,
+    "type": "sfx",
+    "name": "wind_whistle",
+    "params": {
+      "gain": 0.5,
+      "pitch": 1.5
+    }
+  },
+  {
+    "time": 25.525,
+    "type": "sfx",
+    "name": "wind_whistle",
+    "params": {
+      "gain": 0.4,
+      "pitch": 1.3
+    }
+  },
+  {
+    "time": 28.866,
+    "type": "sfx",
+    "name": "smoke_hiss",
+    "params": {
+      "gain": 0.3
+    }
+  },
+  {
+    "time": 29.866,
+    "type": "sfx",
+    "name": "air_spread",
+    "params": {
+      "gain": 0.2
+    }
+  },
+  {
+    "time": 35.306,
+    "type": "music",
+    "name": "swell_strings",
+    "params": {
+      "gain": 0.4,
+      "fadeIn": 1
+    }
+  },
+  {
+    "time": 36.306,
+    "type": "music",
+    "name": "choir_pad",
+    "params": {
+      "gain": 0.3,
+      "fadeIn": 2
+    }
+  },
+  {
+    "time": 41.72,
+    "type": "sfx",
+    "name": "termite_tap",
+    "params": {
+      "gain": 0.4,
+      "rate": 4
+    }
+  },
+  {
+    "time": 42.72,
+    "type": "music",
+    "name": "marimba_motif",
+    "params": {
+      "gain": 0.3
+    }
+  },
+  {
+    "time": 52.971,
+    "type": "sfx",
+    "name": "stone_grind_reverse",
+    "params": {
+      "gain": 0.6,
+      "duration": 1.5
+    }
+  },
+  {
+    "time": 53.471,
+    "type": "sfx",
+    "name": "light_rush",
+    "params": {
+      "gain": 0.4
+    }
+  },
+  {
+    "time": 53.471,
+    "type": "music",
+    "name": "resolve_chord",
+    "params": {
+      "gain": 0.5
+    }
+  },
+  {
+    "time": 54.525,
+    "type": "sfx",
+    "name": "birds_chirp",
+    "params": {
+      "gain": 0.4
+    }
+  },
+  {
+    "time": 55.025,
+    "type": "sfx",
+    "name": "wind_open",
+    "params": {
+      "gain": 0.5
+    }
+  },
+  {
+    "time": 55.025,
+    "type": "music",
+    "name": "theme_main",
+    "params": {
+      "gain": 0.6,
+      "fadeIn": 1
+    }
+  },
+  {
+    "time": 57.031,
+    "type": "sfx",
+    "name": "footstep_modern",
+    "params": {
+      "gain": 0.5
+    }
+  },
+  {
+    "time": 57.531,
+    "type": "sfx",
+    "name": "hand_on_stone",
+    "params": {
+      "gain": 0.3
+    }
+  },
+  {
+    "time": 58.804,
+    "type": "sfx",
+    "name": "stone_touch",
+    "params": {
+      "gain": 0.4
+    }
+  },
+  {
+    "time": 59.304,
+    "type": "sfx",
+    "name": "cool_air_rush",
+    "params": {
+      "gain": 0.3
+    }
+  },
+  {
+    "time": 50.6,
+    "type": "music",
+    "name": "callback_motif",
+    "params": {
+      "gain": 0.5
+    }
+  },
+  {
+    "time": 54.1,
+    "type": "music",
+    "name": "final_chord",
+    "params": {
+      "gain": 0.6,
+      "fadeIn": 2
+    }
+  },
+  {
+    "time": 57.6,
+    "type": "sfx",
+    "name": "deep_resonance",
+    "params": {
+      "gain": 0.4,
+      "duration": 4
+    }
+  },
+  {
+    "time": 63.6,
+    "type": "music",
+    "name": "fade_out",
+    "params": {
+      "gain": 0,
+      "fadeOut": 4
+    }
+  }
+]
