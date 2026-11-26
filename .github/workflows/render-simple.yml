@@ -37,12 +37,12 @@ jobs:
 
       - name: Render video
         env:
-          REMOTION_CHROMIUM_FLAGS: --use-angle=swiftshader --enable-webgl --disable-gpu-sandbox
+          CHROMIUM_FLAGS: --use-angle=swiftshader --enable-webgl --disable-gpu-sandbox --no-sandbox --disable-dev-shm-usage
         run: |
           npx remotion render src/index.tsx DerinkuyuShort out/final.mp4 \
             --codec h264 \
             --crf ${{ github.event.inputs.quality }} \
-            --gl=angle \
+            --headless \
             --frames=${{ github.event.inputs.frames }} \
             --concurrency 2
 
