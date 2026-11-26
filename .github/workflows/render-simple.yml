@@ -19,6 +19,8 @@ jobs:
     name: Render ${{ github.event.inputs.frames }} @ CRF${{ github.event.inputs.quality }}
     runs-on: ubuntu-latest
     timeout-minutes: 90
+    env:
+      CHROMIUM_FLAGS: --use-angle=swiftshader --enable-webgl --disable-gpu-sandbox --no-sandbox --disable-dev-shm-usage --use-gl=angle
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -48,8 +50,7 @@ jobs:
               --crf ${{ github.event.inputs.quality }} \
               --headless \
               --frames=${{ github.event.inputs.frames }} \
-              --concurrency 2 \
-              --chromium-flags="--use-angle=swiftshader --enable-webgl --disable-gpu-sandbox --no-sandbox --disable-dev-shm-usage --use-gl=angle"
+              --concurrency 2
 
       - name: Verify output
         run: |
