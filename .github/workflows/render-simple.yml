@@ -35,16 +35,20 @@ jobs:
       - name: Build Remotion bundle
         run: npm run build
 
-      - name: Render video
-        env:
-          CHROMIUM_FLAGS: --use-angle=swiftshader --enable-webgl --disable-gpu-sandbox --no-sandbox --disable-dev-shm-usage
+      - name: Install GPU dependencies
         run: |
-          npx remotion render src/index.tsx DerinkuyuShort out/final.mp4 \
-            --codec h264 \
-            --crf ${{ github.event.inputs.quality }} \
-            --headless \
-            --frames=${{ github.event.inputs.frames }} \
-            --concurrency 2
+          sudo apt-get update
+          sudo apt-get install -y libgl1-mesa-glx libegl1-mesa xvfb
+
+      - name: Render video
+        run: |
+          xvfb-run -a -s "-screen 0 1440x2560x24" \
+            npx remotion render src/index.tsx DerinkuyuShort out/final.mp4 \
+              --codec h264 \
+              --crf ${{ github.event.inputs.quality }} \
+              --headless \
+              --frames=${{ github.event.inputs.frames }} \
+              --concurrency 2
 
       - name: Verify output
         run: |
