@@ -48,7 +48,8 @@ jobs:
               --crf ${{ github.event.inputs.quality }} \
               --headless \
               --frames=${{ github.event.inputs.frames }} \
-              --concurrency 2
+              --concurrency 2 \
+              --chromium-flags="--use-angle=swiftshader --enable-webgl --disable-gpu-sandbox --no-sandbox --disable-dev-shm-usage --use-gl=angle"
 
       - name: Verify output
         run: |
