@@ -37,12 +37,15 @@ jobs:
       - name: Build Remotion bundle
         run: npm run build
 
-      - name: Install GPU dependencies
+      - name: Install Chrome & GPU dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libgl1 libegl1 xvfb
+          sudo apt-get install -y chromium-browser libgl1 libegl1 xvfb
 
       - name: Render video
+        env:
+          CHROMIUM_PATH: /usr/bin/chromium-browser
+          CHROMIUM_FLAGS: --use-angle=swiftshader --enable-webgl --disable-gpu-sandbox --no-sandbox --disable-dev-shm-usage --use-gl=angle
         run: |
           xvfb-run -a -s "-screen 0 1440x2560x24" \
             npx remotion render src/index.tsx DerinkuyuShort out/final.mp4 \
