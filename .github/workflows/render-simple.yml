@@ -36,6 +36,8 @@ jobs:
         run: npm run build
 
       - name: Render video
+        env:
+          REMOTION_CHROMIUM_FLAGS: --use-angle=swiftshader --enable-webgl --disable-gpu-sandbox
         run: |
           npx remotion render src/index.tsx DerinkuyuShort out/final.mp4 \
             --codec h264 \
