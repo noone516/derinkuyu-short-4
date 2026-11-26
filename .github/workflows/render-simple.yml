@@ -42,7 +42,7 @@ jobs:
             --crf ${{ github.event.inputs.quality }} \
             --gl=angle \
             --frames=${{ github.event.inputs.frames }} \
---concurrency 2
+            --concurrency 2
 
       - name: Verify output
         run: |
